@@ -74,332 +74,6 @@
         </div>
     </section><!-- End About Us Section -->
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-        <div class="container">
-            <!-- ======= Form Section ======= -->
-            <section id="Form" class="contact section-bg">
-                <div class="container">
-
-                    <div class="section-title">
-                        <h2>Take the Quiz Now!</h2>
-                        <p>Find out where you stand in 2016 based on your world views. Answer as many questions as you like, the rest will be autofilled by the most common answer</p>
-                    </div>
-
-                    <div class="row">
-                        <div class="align-items-center">
-
-                            <form action="/submission" method="post" role="form" class="email-form"
-                                data-aos="fade-left">
-                                {{ generate_questions("ls3", "How Satisfied are you with your life?", ["Very Satisfied",
-                                "Somewhat Satisfied", "Somewhat Dissatisfied", "Very Dissatisfied"]) }}
-                                <div class="col-md-6 form-group">
-                                    <label for="a4">Which is the most serious problem faced by the country?</label>
-                                    <br />
-                                    {{ add_option("a4", "Armed conflict", "30")}}
-                                    {{ add_option("a4", "Bad government", "15")}}
-                                    {{ add_option("a4", "Corruption", "13")}}
-                                    {{ add_option("a4", "Credit, lack of", "09")}}
-                                    {{ add_option("a4", "Crime", "05")}}
-                                    {{ add_option("a4", "Discrimination", "25")}}
-                                    {{ add_option("a4", "Drug addiction; Consumption of drugs", "11")}}
-                                    {{ add_option("a4", "Drug Trafficking", "12")}}
-                                    {{ add_option("a4", "Economy, problems with, crisis of", "01")}}
-                                    {{ add_option("a4", "Education, lack of, poor quality", "21")}}
-                                    {{ add_option("a4", "Electricity, lack of", "24")}}
-                                    {{ add_option("a4", "Environment", "10")}}
-                                    {{ add_option("a4", "External Debt", "26")}}
-                                    {{ add_option("a4", "Forced displacement of persons", "32")}}
-                                    {{ add_option("a4", "Gangs", "14")}}
-                                    {{ add_option("a4", "Health Services, lack of", "22")}}
-                                    {{ add_option("a4", "Housing", "55")}}
-                                    {{ add_option("a4", "Human rights, violations of", "56")}}
-                                    {{ add_option("a4", "Impunity", "61")}}
-                                    {{ add_option("a4", "Inequality", "58")}}
-                                    {{ add_option("a4", "Inflation, high prices", "2")}}
-                                    {{ add_option("a4", "Kidnapping", "31")}}
-                                    {{ add_option("a4", "Land to farm, lack of", "7")}}
-                                    {{ add_option("a4", "Malnutrition", "23")}}
-                                    {{ add_option("a4", "Migration", "16")}}
-                                    {{ add_option("a4", "Politicians", "59")}}
-                                    {{ add_option("a4", "Popular protests (Strikes, blocking roads, work stoppage,
-                                    etc)", "6")}}
-                                    {{ add_option("a4", "Population Explosion", "20")}}
-                                    {{ add_option("a4", "Poverty", "4")}}
-                                    {{ add_option("a4", "Road in poor conditions", "18")}}
-                                    {{ add_option("a4", "Security, lack of", "27")}}
-                                    {{ add_option("a4", "Terrorism", "33")}}
-                                    {{ add_option("a4", "Transportation, problems of", "60")}}
-                                    {{ add_option("a4", "Unemployment", "3")}}
-                                    {{ add_option("a4", "Violence", "57")}}
-                                    {{ add_option("a4", "War against terrorism", "17")}}
-                                    {{ add_option("a4", "Water, lack of", "19")}}
-                                    {{ add_option("a4", "Other", "70")}}
-                                </div>
-                                <br />
-                                {{ generate_questions("soct2", "Do you think that the country's current economic
-                                situation is
-                                better than, the same as or worse than it was in 2004?", ["Better", "Same", "Worst"]) }}
-                                <div>
-                                    <label for="l1b">
-                                        Now, to change the subject.... On this card there is a 1-10 scale that goes from
-                                        liberal to
-                                        conservative. One means liberal and 10 means conservative. Nowadays, when we
-                                        speak of political
-                                        leanings, we talk of liberals and conservatives. In other words, some people
-                                        sympathize more with the
-                                        liberals and others with the conservatives. According to the meaning that the
-                                        terms "liberals" and
-                                        "conservatives" have for you, and thinking of your own political leanings, where
-                                        would you place yourself
-                                        on this scale?
-                                    </label>
-                                    <input type="range" class="form-range" min="0" max="10" step="1" id="l1b"
-                                        name="l1b">
-                                </div>
-                                <br />
-                                {{ generate_questions("vic1ext", "Now, changing the subject, have you been a victim of
-                                any type of crime in the
-                                past
-                                12 months? That is, have you been a victim of robbery, burglary, assault, fraud,
-                                blackmail,
-                                extortion, violent threats or any other type of crime in the past 12 months?", ["Yes",
-                                "No"]) }}
-                                {{ generate_questions('aoj11', "Speaking of the neighborhood where you live and thinking
-                                of the possibility of
-                                being
-                                assaulted or robbed, do you feel very safe, somewhat safe, somewhat unsafe or
-                                very unsafe?", ["Very Safe", "Somewhat Safe", "Somewhat Unsafe", "Very Unsafe"]) }}
-                                <div class="image">
-                                    <img src="assets/img/staircase.png" class="img-fluid" alt="">
-                                </div>
-                                <div>
-                                    We are going to ask you a series of questions. We are going to ask that you use the
-                                    numbers
-                                    provided in the staircase to answer. Remember, you can use any number.
-
-                                    {{ generate_stair_qn("b1", "To what extent do you think the courts in the United
-                                    States guarantee a fair trial? If you think the courts do not ensure justice at all,
-                                    choose number 1; if you think the courts ensure justice a lot, choose number 7, or
-                                    choose a point in between the two.")}}
-                                    {{ generate_stair_qn("b2", "To what extent do you respect the political institutions
-                                    of the United States?")}}
-                                    {{ generate_stair_qn("b3", "To what extent do you think that citizens' basic rights
-                                    are well protected by the political system of the United States?")}}
-                                    {{ generate_stair_qn("b4", "To what extent do you feel proud of living under the
-                                    political system of the United States")}}
-                                    {{ generate_stair_qn("b6", "To what extent do you think that one should support the
-                                    political system of the United States?")}}
-                                    {{ generate_stair_qn("b43", "To what extent are you proud of being American?")}}
-                                    {{ generate_stair_qn("b12", "To what extent do you trust the Armed Forces? ")}}
-                                    {{ generate_stair_qn("b13", "To what extent do you trust the U.S. Congress? ")}}
-                                    {{ generate_stair_qn("b18", "To what extent do you trust the Police?")}}
-                                    {{ generate_stair_qn("b21", "To what extent do you trust political parties?")}}
-                                    {{ generate_stair_qn("b21a", "To what extent do you trust the President?")}}
-                                    {{ generate_stair_qn("b32", "To what extent do you trust the local or municipal
-                                    government?")}}
-                                    {{ generate_stair_qn("b37", "To what extent do you trust the mass media?")}}
-                                    {{ generate_stair_qn("b47a", "To what extent do you trust elections in this
-                                    country?")}}
-                                    <br />
-                                    {{generate_questions("m1", "Speaking in general of the current administration, how
-                                    would you rate the job performance of President Donald Trump?", ["Very good",
-                                    "Good",
-                                    "Neither good nor bad", "Bad", "Very bad"])}}
-                                    {{ generate_questions("m2", "Now speaking of Congress, and thinking of members of
-                                    Congress as a whole,
-                                    without considering the political parties to which they belong, do you believe that
-                                    the
-                                    members of Congress are performing their jobs: very well, well, neither well nor
-                                    poorly,
-                                    poorly, or very poorly?", ["Very Well", "Well", "Neither well nor poorly", "Poorly",
-                                    "Very Poorly"])
-                                    }}
-                                    {{
-                                    generate_questions("infrax", "Suppose someone enters your home to burglarize it and
-                                    you call the police. How
-                                    long do you think it would take the police to arrive at your house on a typical day
-                                    around
-                                    noon?", ["Less than 10 minutes", "Between 10 and 30 minutes", "More than 30 minutes
-                                    and up to an hour", "More than an hour and up to three hours", "More than three
-                                    hours", "There are no police / they would never arrive"])
-                                    }}
-                                    {{
-                                    generate_questions("infra3", "Suppose you are in your house and you experience a
-                                    very serious injury and need
-                                    immediate medical attention. How long do you think it would take you, by the fastest
-                                    means,
-                                    to get to the nearest medical center or hospital (public or private)?", ["Less than
-                                    10 minutes", "Between 10 and 30 minutes", "More than 30 minutes and up to an hour",
-                                    "More than an hour and up to three hours", "More than three hours", "There is no
-                                    such service available / I would'nt go to one"])
-                                    }}
-                                    <div>
-                                        <p>
-                                            Now we will use a similar staircase, but this time 1 means “strongly
-                                            disagree” and 7 means “strongly
-                                            agree.” A number in between 1 and 7 represents an intermediate score.
-                                        </p>
-                                        <div class="image">
-                                            <img src="assets/img/staircase2.png" class="img-fluid" alt="">
-                                        </div>
-                                        {{
-                                        generate_stair_qn("ros1", "The United States government, instead of the private
-                                        sector, should own the most
-                                        important enterprises and industries of the country. How much do you agree or
-                                        disagree
-                                        with this statement?")
-                                        }}
-                                        {{
-                                        generate_stair_qn("ros4", "The United States government should implement strong
-                                        policies to reduce income
-                                        inequality between the rich and the poor. To what extent do you agree or
-                                        disagree with this
-                                        statement?")
-                                        }}
-                                        {{
-                                        generate_stair_qn("ing4", "Changing the subject again, democracy may have
-                                        problems, but it is better than any
-                                        other form of government. To what extent do you agree or disagree with this
-                                        statement?")
-                                        }}
-                                        {{
-                                        generate_stair_qn("eff1", "Those who govern this country are interested in what
-                                        people like you think. How
-                                        much do you agree or disagree with that view?")
-                                        }}
-                                        {{
-                                        generate_stair_qn("eff2", "You feel that you understand the most important
-                                        political issues of this country. How
-                                        much do you agree or disagree with that view? ")
-                                        }}
-                                        {{
-                                        generate_stair_qn("aoj22new", "To reduce crime in a country like ours,
-                                        punishment of criminals must be
-                                        increased. To what extent do you agree or disagree with this statement?")
-                                        }}
-                                        {{
-                                        generate_stair_qn("media3", "Information reported by the United States news
-                                        media is an accurate
-                                        representation of the different viewpoints that exist in the United States. To
-                                        what extent do
-                                        you agree or disagree with this statement?")
-                                        }}
-                                        {{
-                                        generate_stair_qn("media4", "The United States news media are controlled by a
-                                        few big corporations. To what
-                                        extent do you agree or disagree with this statement?")
-                                        }}
-                                    </div>
-                                    {{
-                                    generate_questions("pn4", "In general, would you say that you are very satisfied,
-                                    satisfied, dissatisfied or very
-                                    dissatisfied with the way democracy works in the United States?", ["Very Satisfied",
-                                    "Satisfied", "Dissatisfied", "Very dissatisfied"])
-                                    }}
-
-                                    <div>
-                                        <p>
-                                            Now we are going to use another image. The new image has a 10-point ladder,
-                                            which goes from 1 to
-                                            10, where 1 means that you strongly disapprove and 10 means that you
-                                            strongly approve. We are
-                                            going to show you a list of some actions that people can take to achieve
-                                            their political goals and
-                                            objectives. Please tell us how strongly you would approve or disapprove of
-                                            people taking the following
-                                            actions.
-                                        </p>
-                                        <div class="image">
-                                            <img src="assets/img/staircase3.png" class="img-fluid" alt="">
-                                        </div>
-                                        {{
-                                        generate_stair_qn("d1", "There are people who only say bad things about the
-                                        American form of government, not
-                                        just the current (incumbent) government but the system of government. How
-                                        strongly do
-                                        you approve or disapprove of such people's right to vote?", 10)
-                                        }}
-                                        {{
-                                        generate_stair_qn("d2", "How strongly do you approve or disapprove that such
-                                        people be allowed to conduct
-                                        peaceful demonstrations in order to express their views?", 10)
-                                        }}
-                                        {{
-                                        generate_stair_qn("d3", "Still thinking of those who only say bad things about
-                                        the American form of government,
-                                        how strongly do you approve or disapprove of such people being permitted to run
-                                        for public
-                                        office?", 10)
-                                        }}
-                                        {{
-                                        generate_stair_qn("d4", "How strongly do you approve or disapprove of such
-                                        people appearing on television to
-                                        make speeches?", 10)
-                                        }}
-                                        {{
-                                        generate_stair_qn("d5", "And now on a different topic, thinking of homosexuals,
-                                        how strongly do you approve or
-                                        disapprove of such people being permitted to run for public office?", 10)
-                                        }}
-                                        {{
-                                        generate_stair_qn("d6", " How strongly do you approve or disapprove of same-sex
-                                        couples having the right to
-                                        marry?", 10)
-                                        }}
-                                    </div>
-                                    {{
-                                    generate_questions("lib1", "Do you believe that nowadays in
-                                    the country we have very little, enough
-                                    or too much freedom of press?", ["Very little", "Enough", "Too much"])
-                                    }}
-                                    {{
-                                    generate_questions("lib2b", "And freedom of expression.
-                                    Do we have very little, enough or too
-                                    much?", ["Very little", "Enough", "Too much"])
-                                    }}
-                                    {{
-                                    generate_questions("lib2c", "And freedom to express
-                                    political views without fear. Do we
-                                    have very little, enough or too much?", ["Very little", "Enough", "Too much"])
-                                    }}
-                                    {{
-                                    generate_questions("lib4", "Human rights protection. Do we
-                                    have very little, enough or too much?", ["Very little", "Enough", "Too much"])
-                                    }}
-                                    {{
-                                    generate_questions("usmex1", "Generally speaking, which of the following words
-                                    better describes your feelings
-                                    towards Mexico?", ["Trust", "Distrust", "Indifference"])
-                                    }}
-                                    {{
-                                    generate_questions("exc7new", "Thinking of the politicians of the United States… how
-                                    many of them do you
-                                    believe are involved in corruption?
-                                    ", ["None", "Less than half of them", "Half of them", "More than half of them",
-                                    "All"])
-                                    }}
-                                    {{
-                                    generate_questions("vb1", "Are you registered to vote?", ["Yes", "No", "Being
-                                    processed"])
-                                    }}
-                                    {{
-                                    generate_questions("vb2","Did you vote in the last presidential elections of 2016?",
-                                    ["Voted", "Did not vote"])
-                                    }}
-
-                                    <div class="text-center"><button type="submit">Find out now!</button></div>
-                            </form>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-        </div>
-    </section><!-- End Services Section -->
-
     <!-- ======= Frequently Asked Questions Section ======= -->
     <section id="faq" class="faq">
         <div class="container">
@@ -434,6 +108,367 @@
             </ul>
         </div>
     </section><!-- End Frequently Asked Questions Section -->
+
+    <!-- ======= Form Section ======= -->
+    <section id="form" class="contact section-bg">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Take the Quiz Now!</h2>
+                <p>Find out where you stand in 2016 based on your world views. <b>Answer as many questions as you like, the
+                    rest will be autofilled by the most common answer</b></p>
+            </div>
+
+            <div class="row">
+                <div class="align-items-center">
+
+                    <form action="/submission" method="post" role="form" class="email-form" data-aos="fade-left">
+                        {{ generate_questions("ls3", "How Satisfied are you with your life?", ["Very Satisfied",
+                        "Somewhat Satisfied", "Somewhat Dissatisfied", "Very Dissatisfied"]) }}
+                        {{
+                        generate_questions("q10new", "And into which of the following ranges does the total monthly
+                        income of your
+                        household fit, including remittances from abroad and the income of all the working adults and
+                        children?", ["No Income", "Less than $350", "$350-$700", "$701-$1000", "$1,001- $1,200",
+                        "$1,201-$1,500", "$1,501-$1,800", "$1,800-$2,200", "$2,201-$2,700", "$2,701-$3,100",
+                        "$3,101-$3,600", "$3,601-$4,400", "$4,401-$5,100", "$5,101-$6,200", "$6,201-$8,600",
+                        "$8,601-$15,500", "More than $15,500"])
+                        }}
+                        {{
+                        generate_questions("q5a", "How often do you attend religious services?", ["More than once per
+                        week", "Once per week", "Once a month", "Once or twice a year", "Never or almost never"])
+                        }}
+                        {{
+                        generate_questions("q12", "Do you have children? How Many?",
+                        [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20])
+                        }}
+                        <div class="col-md-6 form-group">
+                            <label for="a4">Which is the most serious problem faced by the country?</label>
+                            <br />
+                            {{ add_option("a4", "Armed conflict", "30")}}
+                            {{ add_option("a4", "Bad government", "15")}}
+                            {{ add_option("a4", "Corruption", "13")}}
+                            {{ add_option("a4", "Credit, lack of", "09")}}
+                            {{ add_option("a4", "Crime", "05")}}
+                            {{ add_option("a4", "Discrimination", "25")}}
+                            {{ add_option("a4", "Drug addiction; Consumption of drugs", "11")}}
+                            {{ add_option("a4", "Drug Trafficking", "12")}}
+                            {{ add_option("a4", "Economy, problems with, crisis of", "01")}}
+                            {{ add_option("a4", "Education, lack of, poor quality", "21")}}
+                            {{ add_option("a4", "Electricity, lack of", "24")}}
+                            {{ add_option("a4", "Environment", "10")}}
+                            {{ add_option("a4", "External Debt", "26")}}
+                            {{ add_option("a4", "Forced displacement of persons", "32")}}
+                            {{ add_option("a4", "Gangs", "14")}}
+                            {{ add_option("a4", "Health Services, lack of", "22")}}
+                            {{ add_option("a4", "Housing", "55")}}
+                            {{ add_option("a4", "Human rights, violations of", "56")}}
+                            {{ add_option("a4", "Impunity", "61")}}
+                            {{ add_option("a4", "Inequality", "58")}}
+                            {{ add_option("a4", "Inflation, high prices", "2")}}
+                            {{ add_option("a4", "Kidnapping", "31")}}
+                            {{ add_option("a4", "Land to farm, lack of", "7")}}
+                            {{ add_option("a4", "Malnutrition", "23")}}
+                            {{ add_option("a4", "Migration", "16")}}
+                            {{ add_option("a4", "Politicians", "59")}}
+                            {{ add_option("a4", "Popular protests (Strikes, blocking roads, work stoppage,
+                            etc)", "6")}}
+                            {{ add_option("a4", "Population Explosion", "20")}}
+                            {{ add_option("a4", "Poverty", "4")}}
+                            {{ add_option("a4", "Road in poor conditions", "18")}}
+                            {{ add_option("a4", "Security, lack of", "27")}}
+                            {{ add_option("a4", "Terrorism", "33")}}
+                            {{ add_option("a4", "Transportation, problems of", "60")}}
+                            {{ add_option("a4", "Unemployment", "3")}}
+                            {{ add_option("a4", "Violence", "57")}}
+                            {{ add_option("a4", "War against terrorism", "17")}}
+                            {{ add_option("a4", "Water, lack of", "19")}}
+                            {{ add_option("a4", "Other", "70")}}
+                        </div>
+                        <br />
+                        {{ generate_questions("soct2", "Do you think that the country's current economic
+                        situation is
+                        better than, the same as or worse than it was in 2004?", ["Better", "Same", "Worst"]) }}
+                        <div>
+                            <label for="l1b">
+                                Now, to change the subject.... On this card there is a 1-10 scale that goes from
+                                liberal to
+                                conservative. One means liberal and 10 means conservative. Nowadays, when we
+                                speak of political
+                                leanings, we talk of liberals and conservatives. In other words, some people
+                                sympathize more with the
+                                liberals and others with the conservatives. According to the meaning that the
+                                terms "liberals" and
+                                "conservatives" have for you, and thinking of your own political leanings, where
+                                would you place yourself
+                                on this scale?
+                            </label>
+                            <input type="range" class="form-range" min="0" max="10" step="1" id="l1b" name="l1b">
+                        </div>
+                        <br />
+                        {{ generate_questions("vic1ext", "Now, changing the subject, have you been a victim of
+                        any type of crime in the
+                        past
+                        12 months? That is, have you been a victim of robbery, burglary, assault, fraud,
+                        blackmail,
+                        extortion, violent threats or any other type of crime in the past 12 months?", ["Yes",
+                        "No"]) }}
+                        {{ generate_questions('aoj11', "Speaking of the neighborhood where you live and thinking
+                        of the possibility of
+                        being
+                        assaulted or robbed, do you feel very safe, somewhat safe, somewhat unsafe or
+                        very unsafe?", ["Very Safe", "Somewhat Safe", "Somewhat Unsafe", "Very Unsafe"]) }}
+                        <div class="image">
+                            <img src="assets/img/staircase.png" class="img-fluid" alt="">
+                        </div>
+                        <div>
+                            We are going to ask you a series of questions. We are going to ask that you use the
+                            numbers
+                            provided in the staircase to answer. Remember, you can use any number.
+
+                            {{ generate_stair_qn("b1", "To what extent do you think the courts in the United
+                            States guarantee a fair trial? If you think the courts do not ensure justice at all,
+                            choose number 1; if you think the courts ensure justice a lot, choose number 7, or
+                            choose a point in between the two.")}}
+                            {{ generate_stair_qn("b2", "To what extent do you respect the political institutions
+                            of the United States?")}}
+                            {{ generate_stair_qn("b3", "To what extent do you think that citizens' basic rights
+                            are well protected by the political system of the United States?")}}
+                            {{ generate_stair_qn("b4", "To what extent do you feel proud of living under the
+                            political system of the United States")}}
+                            {{ generate_stair_qn("b6", "To what extent do you think that one should support the
+                            political system of the United States?")}}
+                            {{ generate_stair_qn("b43", "To what extent are you proud of being American?")}}
+                            {{ generate_stair_qn("b12", "To what extent do you trust the Armed Forces? ")}}
+                            {{ generate_stair_qn("b13", "To what extent do you trust the U.S. Congress? ")}}
+                            {{ generate_stair_qn("b18", "To what extent do you trust the Police?")}}
+                            {{ generate_stair_qn("b21", "To what extent do you trust political parties?")}}
+                            {{ generate_stair_qn("b21a", "To what extent do you trust the President?")}}
+                            {{ generate_stair_qn("b32", "To what extent do you trust the local or municipal
+                            government?")}}
+                            {{ generate_stair_qn("b37", "To what extent do you trust the mass media?")}}
+                            {{ generate_stair_qn("b47a", "To what extent do you trust elections in this
+                            country?")}}
+                            <br />
+                            {{generate_questions("m1", "Speaking in general of the current administration, how
+                            would you rate the job performance of President Donald Trump?", ["Very good",
+                            "Good",
+                            "Neither good nor bad", "Bad", "Very bad"])}}
+                            {{ generate_questions("m2", "Now speaking of Congress, and thinking of members of
+                            Congress as a whole,
+                            without considering the political parties to which they belong, do you believe that
+                            the
+                            members of Congress are performing their jobs: very well, well, neither well nor
+                            poorly,
+                            poorly, or very poorly?", ["Very Well", "Well", "Neither well nor poorly", "Poorly",
+                            "Very Poorly"])
+                            }}
+                            {{
+                            generate_questions("infrax", "Suppose someone enters your home to burglarize it and
+                            you call the police. How
+                            long do you think it would take the police to arrive at your house on a typical day
+                            around
+                            noon?", ["Less than 10 minutes", "Between 10 and 30 minutes", "More than 30 minutes
+                            and up to an hour", "More than an hour and up to three hours", "More than three
+                            hours", "There are no police / they would never arrive"])
+                            }}
+                            {{
+                            generate_questions("infra3", "Suppose you are in your house and you experience a
+                            very serious injury and need
+                            immediate medical attention. How long do you think it would take you, by the fastest
+                            means,
+                            to get to the nearest medical center or hospital (public or private)?", ["Less than
+                            10 minutes", "Between 10 and 30 minutes", "More than 30 minutes and up to an hour",
+                            "More than an hour and up to three hours", "More than three hours", "There is no
+                            such service available / I would'nt go to one"])
+                            }}
+                            <div>
+                                <p>
+                                    Now we will use a similar staircase, but this time 1 means “strongly
+                                    disagree” and 7 means “strongly
+                                    agree.” A number in between 1 and 7 represents an intermediate score.
+                                </p>
+                                <div class="image">
+                                    <img src="assets/img/staircase2.png" class="img-fluid" alt="">
+                                </div>
+                                {{
+                                generate_stair_qn("ros1", "The United States government, instead of the private
+                                sector, should own the most
+                                important enterprises and industries of the country. How much do you agree or
+                                disagree
+                                with this statement?")
+                                }}
+                                {{
+                                generate_stair_qn("ros4", "The United States government should implement strong
+                                policies to reduce income
+                                inequality between the rich and the poor. To what extent do you agree or
+                                disagree with this
+                                statement?")
+                                }}
+                                {{
+                                generate_stair_qn("ing4", "Changing the subject again, democracy may have
+                                problems, but it is better than any
+                                other form of government. To what extent do you agree or disagree with this
+                                statement?")
+                                }}
+                                {{
+                                generate_stair_qn("eff1", "Those who govern this country are interested in what
+                                people like you think. How
+                                much do you agree or disagree with that view?")
+                                }}
+                                {{
+                                generate_stair_qn("eff2", "You feel that you understand the most important
+                                political issues of this country. How
+                                much do you agree or disagree with that view? ")
+                                }}
+                                {{
+                                generate_stair_qn("aoj22new", "To reduce crime in a country like ours,
+                                punishment of criminals must be
+                                increased. To what extent do you agree or disagree with this statement?")
+                                }}
+                                {{
+                                generate_stair_qn("media3", "Information reported by the United States news
+                                media is an accurate
+                                representation of the different viewpoints that exist in the United States. To
+                                what extent do
+                                you agree or disagree with this statement?")
+                                }}
+                                {{
+                                generate_stair_qn("media4", "The United States news media are controlled by a
+                                few big corporations. To what
+                                extent do you agree or disagree with this statement?")
+                                }}
+                            </div>
+                            {{
+                            generate_questions("pn4", "In general, would you say that you are very satisfied,
+                            satisfied, dissatisfied or very
+                            dissatisfied with the way democracy works in the United States?", ["Very Satisfied",
+                            "Satisfied", "Dissatisfied", "Very dissatisfied"])
+                            }}
+
+                            <div>
+                                <p>
+                                    Now we are going to use another image. The new image has a 10-point ladder,
+                                    which goes from 1 to
+                                    10, where 1 means that you strongly disapprove and 10 means that you
+                                    strongly approve. We are
+                                    going to show you a list of some actions that people can take to achieve
+                                    their political goals and
+                                    objectives. Please tell us how strongly you would approve or disapprove of
+                                    people taking the following
+                                    actions.
+                                </p>
+                                <div class="image">
+                                    <img src="assets/img/staircase3.png" class="img-fluid" alt="">
+                                </div>
+                                {{
+                                generate_stair_qn("d1", "There are people who only say bad things about the
+                                American form of government, not
+                                just the current (incumbent) government but the system of government. How
+                                strongly do
+                                you approve or disapprove of such people's right to vote?", 10)
+                                }}
+                                {{
+                                generate_stair_qn("d2", "How strongly do you approve or disapprove that such
+                                people be allowed to conduct
+                                peaceful demonstrations in order to express their views?", 10)
+                                }}
+                                {{
+                                generate_stair_qn("d3", "Still thinking of those who only say bad things about
+                                the American form of government,
+                                how strongly do you approve or disapprove of such people being permitted to run
+                                for public
+                                office?", 10)
+                                }}
+                                {{
+                                generate_stair_qn("d4", "How strongly do you approve or disapprove of such
+                                people appearing on television to
+                                make speeches?", 10)
+                                }}
+                                {{
+                                generate_stair_qn("d5", "And now on a different topic, thinking of homosexuals,
+                                how strongly do you approve or
+                                disapprove of such people being permitted to run for public office?", 10)
+                                }}
+                                {{
+                                generate_stair_qn("d6", " How strongly do you approve or disapprove of same-sex
+                                couples having the right to
+                                marry?", 10)
+                                }}
+                            </div>
+                            {{
+                            generate_questions("lib1", "Do you believe that nowadays in
+                            the country we have very little, enough
+                            or too much freedom of press?", ["Very little", "Enough", "Too much"])
+                            }}
+                            {{
+                            generate_questions("lib2b", "And freedom of expression.
+                            Do we have very little, enough or too
+                            much?", ["Very little", "Enough", "Too much"])
+                            }}
+                            {{
+                            generate_questions("lib2c", "And freedom to express
+                            political views without fear. Do we
+                            have very little, enough or too much?", ["Very little", "Enough", "Too much"])
+                            }}
+                            {{
+                            generate_questions("lib4", "Human rights protection. Do we
+                            have very little, enough or too much?", ["Very little", "Enough", "Too much"])
+                            }}
+                            {{
+                            generate_questions("usmex1", "Generally speaking, which of the following words
+                            better describes your feelings
+                            towards Mexico?", ["Trust", "Distrust", "Indifference"])
+                            }}
+                            {{
+                            generate_questions("exc7new", "Thinking of the politicians of the United States… how
+                            many of them do you
+                            believe are involved in corruption?
+                            ", ["None", "Less than half of them", "Half of them", "More than half of them",
+                            "All"])
+                            }}
+                            {{
+                            generate_questions("vb1", "Are you registered to vote?", ["Yes", "No", "Being
+                            processed"])
+                            }}
+                            {{
+                            generate_questions("vb2","Did you vote in the last presidential elections of 2016?",
+                            ["Voted", "Did not vote"])
+                            }}
+                            <div class="col-md-6 form-group">
+                                <label for="usvb1011">Which is the most serious problem faced by the country?</label>
+                                <br />
+                                {{ add_option("usvb1011", "Republican", "4001")}}
+                                {{ add_option("usvb1011", "Democrat", "4002")}}
+                                {{ add_option("usvb1011", "Republican", "4001")}}
+                                {{ add_option("usvb1011", "Other", "77")}}
+                            </div>
+                            {{
+                            generate_questions("pol1", "How much interest do you have in politics: a lot, some, little
+                            or none?", ["A lot", "Some", "Little", "None"])
+                            }}
+                            {{
+                            generate_questions("usgov3", "Do you think working-class Americans generally care more or
+                            less about a
+                            candidate’s position on abortion than do more affluent Americans?", ["More", "Less", "The
+                            Same"])
+                            }}
+                            {{
+                            generate_questions("usgov4", "Do you think working-class Americans generally care more or
+                            less about a candidate’s position on gun rights than do more affluent Americans?", ["More",
+                            "Less", "The Same"])
+                            }}
+                            {{
+                            generate_questions("usgov4", "Do you think working-class Americans generally care more or
+                            less about a candidate’s position on taxes than do more affluent Americans?", ["More",
+                            "Less", "The Same"])
+                            }}
+
+                            <div class="text-center"><button type="submit" class="btn-success">Find out now!</button></div>
+                    </form>
+                </div>
+            </div>
+    </section><!-- End Services Section -->
 
 </main>
 {% endblock %}
