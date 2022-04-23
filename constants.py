@@ -1,6 +1,6 @@
 import pickle
 
-with open("model.h", "rb") as file:
+with open("rf.model", "rb") as file:
     model = pickle.load(file)
 keys = [
     "ls3",
